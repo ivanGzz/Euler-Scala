@@ -25,8 +25,8 @@ object Problem13 {
             acc
         } else {
             val head = list.head.map(_.asDigit)
-            val concat = acc zipAll(head.reverse, 0, 0)
-            val listSum: List[Int] = sumTuples(concat, 0)
+            val zip = acc.zipAll(head.reverse, 0, 0)
+            val listSum = sumTuples(zip, 0)
             sumLists(listSum, list.tail)
         }
     }
