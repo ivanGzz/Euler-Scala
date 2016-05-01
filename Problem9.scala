@@ -14,7 +14,8 @@
 object Problem9 {
 
     def main(args: Array[String]): Unit = {
-        val triplet = (for (a <- 1 to 1000; b <- a to 1000; c <- b to 1000 if a * a + b * b == c * c && a + b + c == 1000) yield (a, b, c)).head
+        val triplet = (for (a <- 1 to 1000; b <- a to 1000; c <- b to 1000
+                            if a * a + b * b == c * c && a + b + c == 1000) yield (a, b, c)).head
         println(triplet._1 * triplet._2 * triplet._3)
     }
 
