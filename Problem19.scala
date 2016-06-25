@@ -26,11 +26,10 @@ object Problem19 {
         } else {
             val dayOfMonth = today.get(Calendar.DAY_OF_MONTH)
             val dayOfWeek = today.get(Calendar.DAY_OF_WEEK)
+            today.add(Calendar.MONTH, 1)
             if (dayOfWeek == Calendar.SUNDAY && dayOfMonth == 1) {
-                today.add(Calendar.MONTH, 1)
                 countSundays(acc + 1, today)
             } else {
-                today.add(Calendar.DAY_OF_YEAR, 1)
                 countSundays(acc, today)
             }
         }
