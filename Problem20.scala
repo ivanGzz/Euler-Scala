@@ -13,16 +13,16 @@ import java.math.BigInteger
  */
 object Problem20 {
 
-	def factorial(n: Int, acc: BigInteger): BigInteger = {
-		if (n == 1) {
-			acc
-		} else {
-			factorial(n - 1, acc.multiply(BigInteger.valueOf(n)))
-		}
-	}
+    def factorial(n: Int, acc: BigInteger): BigInteger = {
+        if (n == 1) {
+            acc
+        } else {
+            factorial(n - 1, acc.multiply(BigInteger.valueOf(n)))
+        }
+    }
 
-	def main(args: Array[String]): Unit = {
-		println(factorial(100, BigInteger.ONE).toString().toList.map(_.asDigit).sum)
-	}
+    def main(args: Array[String]): Unit = {
+        println(factorial(100, BigInteger.ONE).toString().toList.map(_.asDigit).sum)
+    }
 
 }
